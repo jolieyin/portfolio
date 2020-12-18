@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #081c38;
+}
+
+/*-------------- Container --------------*/
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 50px;
+  background-color: #9fbfed;
+  transform-origin: top left;
+  transition: transform 0.5s linear;
+}
+
+.container.show-nav {
+  transform: rotate(-23deg);
+}
+
+/*-------------- Circle --------------*/
+.circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+
+.circle {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: #ffa530;
+  border-radius: 50%;
+  transition: transform 0.5s linear;
+}
+
+.container.show-nav .circle {
+  transform: rotate(-70deg);
+}
+
+.circle button {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  height: 100px;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.circle button:focus {
+  outline: none;
+}
+
+.circle button#open {
+  left: 62%;
+}
+
+.circle button#close {
+  top: 65%;
+  transform-origin: top left;
+  transform: rotate(90deg);
+}
+
+/*-------------- Content --------------*/
+.content-container {
+  color: #081c38;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.content-container .profile-container {
+  margin-top: 80px;
+}
+
+.content-container .profile-container ul {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.content-container .profile-container ul li {
+  text-align: start;
+}
+
+/*-------------- Navigation --------------*/
+nav {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  z-index: 100;
+}
+
+nav ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+nav ul li {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 30px 0;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+
+nav ul li a:hover {
+  color: #9fbfed;
+  transform: translate(5px, 5px);
+}
+
+.current-page,
+.current-page:hover {
+  color: #ffa530;
+  cursor: default;
+  transform: none;
+}
+
+nav ul li i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+nav ul li + li {
+  margin-left: 15px;
+  transform: translateX(-150%);
+}
+
+nav ul li + li + li {
+  margin-left: 30px;
+  transform: translateX(-200%);
+}
+
+nav ul li + li + li + li {
+  margin-left: 45px;
+  transform: translateX(-250%);
+}
+
+.container.show-nav + nav li {
+  transform: translateX(0);
+  transition-delay: 0.4s;
+}

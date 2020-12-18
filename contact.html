@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+    <title>Contact Jolie Huang</title>
+</head>
+
+<body>
+    <!------------ Container ------------>
+    <div class="container">
+
+        <!------------ Circle ------------>
+        <div class="circle-container">
+            <div class="circle">
+                <button id="open">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <button id="close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        <!-- // Circle -->
+
+<!----------------------------------------------------------------------------->
+        <div class="contact-container">
+            <div class="split left">
+                <h2>Contact Info</h2>
+
+                <div class="contact-info">
+                    <i class="fas fa-user"></i> Jolie Huang
+                    <br>
+                    <i class="fas fa-envelope"></i> joliehuang@outlook.com
+                </div>
+
+                <div class="social-media">
+                    <a href="#" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/joliesh" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="split right">
+                <h2>Contact Me</h2>
+
+                <form method="POST" id="form">
+                    <input type="text" name="name" id="name" placeholder="Your Name" required>
+                    <input type="email" name="email" id="email" placeholder="Your Email Address" required>
+                    <textarea name="message" id="message" placeholder="Your Message..." cols="30" rows="10" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+
+<!----------------------------------------------------------------------------->
+
+    </div>
+    <!-- // Container -->
+
+    <!------------ Navigation ------------>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">
+                    <i class="fas fa-user-alt"></i> Profile
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-folder-open"></i> Portfolio
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-briefcase"></i> Experience
+                </a>
+            </li>
+            <li>
+                <a href="contact.html" class="current-page">
+                    <i class="fas fa-envelope"></i> Contact
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- // Navigation -->
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
